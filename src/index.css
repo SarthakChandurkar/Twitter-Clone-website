@@ -1,13 +1,230 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root{
+    --text-black-900 : black;
+    --text-white:white;
+}
+*{
+    margin: 0;
+    padding: 0;
+    max-height:750px;
+}
+body{
+    overflow-y: hidden;
+    background-color: black;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+
+.layout{
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    flex-direction: row;
+}
+
+
+
+.firstComponent{
+    display: flex;
+    width: 20%;
+    flex-direction: column;
+    color: var(--text-white);
+    padding: 15px;
+    align-items: center;
+    border-right: 0.5px solid var(--text-white);
+}
+.navbar{
+    display: flex;
+    gap: 25px;
+    flex-direction: column;
+    width: 80%;
+    height: 600px !important;
+}
+.logo{
+    width: 80%;
+    margin-bottom: 20px;
+}
+.profile{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: 500;
+    gap: 10px;
+    padding: 5px 10px;
+    border-radius: 32px;
+    background-color:  rgb(41, 41, 41);
+}
+.more:last-of-type{
+    margin-left: auto;
+}
+.navbarItem{
+    color: var(--text-white);
+    font-size: 26px;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    cursor: pointer;
+    font-weight: 600;
+}
+.tweetButton{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:rgb(29 163 240 / 1);
+    border-radius: 32px;
+    padding: 8px;
+    font-weight: 600 ;
+    cursor: pointer;
+}
+.profileIcon{
+    height: 35px;
+    width: 35px;
+    border-radius: 100%;
+}
+
+
+
+
+.secondComponent{
+    display: flex;
+    flex: 0 0 45%;
+    flex-direction: column;
+    width: 45%;
+    border-right: 0.5px solid white;
+    color: var(--text-white);
+    overflow-y: auto;
+}
+.secondComponent .header{
+    height: 40px;
+    display: flex;
+    border-bottom: 0.5px solid white;
+    align-items: center;
+}
+.secondComponent .header p{
+    margin-left: 10px;
+    font-size: 24px;
+    font-weight: 600;
+}
+.newTweet{
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    gap: 15px;
+    border-bottom: 1px solid white;
+}
+.newTweet .upper{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.newTweet .bottom{
+    display: flex;
+    flex-direction: row;
+    margin-left: 40px;
+}
+.newTweet .tweetButton:last-of-type{
+    margin-left: auto;
+}
+.newTweet .attachments{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.tweet{
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    gap: 10px;
+    border-bottom: 1px solid white;
+}
+.tweet .right{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 90%;
+}
+.tweet .right .nameUsernameTimeago{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    font-size: 16px;
+}
+.tweet .right .tweetScript{
+    font-size: 18px;
+}
+.tweet .right .reactions{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 10px;
+    flex-direction: row;
+}
+.tweet .right .nameUsernameTimeago .moreIcon:last-of-type{
+    margin-left: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.thirdComponent{
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    color: white;
+    overflow-x: hidden;
+    /* overflow-y: scroll; */
+}
+.search{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 10px;
+    height: 40px;
+    border-bottom: 1px solid white;
+}
+
+.thirdComponent .suggestions .followButton:last-of-type{
+    margin-left: auto;
+}
+.thirdComponent .suggestions{
+    padding: 10px 5px;
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    gap: 10px;
+    align-items: center;
+    margin: 40px 11%;
+    background-color: rgb(41, 41, 41);
+    border-radius: 15px;
+}
+
+.login{
+    display: flex;
+    height: 200px;
+    width: 500px;
+    background-color: black;
+    border-radius: 10px;
+    flex-direction: column;
+    border: 1px solid white;
+    text-align: center;
+    align-items: center;
+    padding: 5% 0;
+    gap: 10px;
+    margin: auto;
+    margin-top: 100px;
+    color: white;
+}
+.login-form{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
